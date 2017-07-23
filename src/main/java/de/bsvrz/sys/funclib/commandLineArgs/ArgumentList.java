@@ -749,7 +749,7 @@ public class ArgumentList {
 			E[] enumConstants = typeClass.getEnumConstants();
 			if(enumConstants != null){
 				for(E e : enumConstants) {
-					if(((Enum)e).name().equalsIgnoreCase(value)) return e;
+					if(((Enum<?>)e).name().equalsIgnoreCase(value)) return e;
 					if(e.toString().equalsIgnoreCase(value)) return e;
 					validValues.add(e.toString());
 				}
